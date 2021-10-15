@@ -23,7 +23,7 @@ export default function Main() {
             <Header />
 
             <Content>
-                
+
                 <Menu />
 
                 <Card>
@@ -41,7 +41,7 @@ export default function Main() {
                     </CardHeader>
                     <CardContent>
                         <Title>Saldo disponivel</Title>
-                        <Description>R$ 250.000.000.000</Description>
+                        <Description>R$ 10.325.010</Description>
                     </CardContent>
                     <CardFooter>
                         <Annotation>
