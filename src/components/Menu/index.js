@@ -1,20 +1,50 @@
 import React from 'react'
 
-import QRCode from 'react-native-qrcode'
+import QRCode from 'react-native-qrcode-svg'
 
-import { Container, Code } from './style'
+import { Container, Code, Nav, NavText, NavItem, SignOutButton, SignOutButtonText } from './style'
 
-export default function Menu() {
+import { MaterialIcons } from '@expo/vector-icons';
+
+export default function Menu({ translateY }) {
     return (
-        <Container>
+        <Container style={{
+            opacity: translateY.interpolate({
+                inputRange: [0, 150],
+                outputRange: [0, 1],
+            })
+        }}>
             <Code>
-                <QRCode
+                <QRCode 
                     value="https://michaelheming.com.br"
-                    size={80}
-                    bgColor="#FFF"
-                    fgColor="#8B10AE"
-                />
+                    size={80} 
+                    color="#FFF"
+                    backgroundColor="#8B10AE" 
+                /> 
             </Code>
+
+            <Nav>
+                <NavItem>
+                    <MaterialIcons name="help-outline" size={20} color="#FFF"/>
+                    <NavText>Me ajuda</NavText>
+                </NavItem>
+                <NavItem>
+                    <MaterialIcons name="person-outline" size={20} color="#FFF"/>
+                    <NavText>Perfil</NavText>
+                </NavItem>
+                <NavItem>
+                    <MaterialIcons name="credit-card" size={20} color="#FFF"/>
+                    <NavText>Configurar cartão</NavText>
+                </NavItem>
+                <NavItem>
+                    <MaterialIcons name="smartphone" size={20} color="#FFF"/>
+                    <NavText>Configurações do app</NavText>
+                </NavItem>
+            </Nav>
+
+            <SignOutButton onPress={()=>{}}>
+                <SignOutButtonText>SAIR DO APP</SignOutButtonText>
+            </SignOutButton>
         </Container>
     )
 }
