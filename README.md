@@ -1,5 +1,5 @@
 # Clone Nubank(estudo)
-Esta aplicação tem como objetivo a clonagem do front-end do Nubank, e de algumas de suas funcionalidades.
+Este projeto tem como finalidade a clonagem da interface do Nubank, e de algumas de suas funcionalidades.
 
 > Status: Finalizado ⚠️
 
